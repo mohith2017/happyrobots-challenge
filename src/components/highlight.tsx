@@ -97,7 +97,7 @@ export default function Highlight({ }: Props) {
         <div className="mt-24 mx-4"  key={index}>
           <Popover >
           <PopoverTrigger asChild>
-            <Label htmlFor={`ref${index}`}>{item.role} : {item.content} </Label>
+            <Label htmlFor="ref">{item.role} : {item.content} </Label>
           </PopoverTrigger>
           {showPopover && (
           <PopoverContent className="w-80">
