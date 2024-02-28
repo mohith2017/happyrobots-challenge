@@ -106,7 +106,7 @@ export default function Highlight({ }: Props) {
                 <h4 className="font-medium leading-none">Magic cursor</h4>
                 <AutoFixHighIcon />
                 <p className="text-sm text-muted-foreground">
-                  Changes you'd like to make for the selected text
+                  Changes you&rsquo;d like to make for the selected text
                 </p>
               </div>
               <div className="grid gap-2">
