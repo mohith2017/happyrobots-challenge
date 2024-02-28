@@ -93,11 +93,11 @@ export default function Highlight({ }: Props) {
       
       
       
-      {transcript.map((item: any) => (
-        <div className="mt-24 mx-4">
+      {transcript.map((item: any, index) => (
+        <div className="mt-24 mx-4"  key={index}>
           <Popover >
           <PopoverTrigger asChild>
-            <Label htmlFor="ref">{item.role} : {item.content} </Label>
+            <Label htmlFor={`ref${index}`}>{item.role} : {item.content} </Label>
           </PopoverTrigger>
           {showPopover && (
           <PopoverContent className="w-80">
