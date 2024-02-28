@@ -93,7 +93,7 @@ export default function Highlight({ }: Props) {
       
       
       
-      {transcript.map(item =>
+      {transcript.map((item: any) => (
         <div className="mt-24 mx-4">
           <Popover >
           <PopoverTrigger asChild>
@@ -125,7 +125,7 @@ export default function Highlight({ }: Props) {
         </Popover>
         </div>
        
-       )}
+       ))}
     </div>
     
   )
