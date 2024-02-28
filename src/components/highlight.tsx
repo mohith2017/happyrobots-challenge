@@ -52,12 +52,27 @@ export default function Highlight({ }: Props) {
     };
   }, []);
 
+  const llm = ""//GPT-3.5
+
   
 
   const handleMouseEvent = (e:any) => {
     const selectedText = window.getSelection()?.toString();
     setShowPopover(!!selectedText);
     console.log(!!selectedText);
+
+  
+
+    // const prompt  = `
+    // Typescript -  ${format.json(```
+  
+
+    // ```) }
+    // Follow the above guidelines carefully and generate the response in that format
+    // `;
+
+    //prompt  + llm + selected_text
+
   };
 
   // Idea to highlight those keywords
@@ -71,16 +86,18 @@ export default function Highlight({ }: Props) {
 // );
   };
 
+
+
   return (
     <div className="mt-24 mx-24" >
       
       
-      {/* {transcript.forEach(item =>`${item.role}: ${item.content}`)} */}
-
+      
+      {transcript.map(item =>
         <div className="mt-24 mx-4">
           <Popover >
           <PopoverTrigger asChild>
-            <Label htmlFor="ref">User: Hi, Acme how are you? </Label>
+            <Label htmlFor="ref">{item.role} : {item.content} </Label>
           </PopoverTrigger>
           {showPopover && (
           <PopoverContent className="w-80">
@@ -108,8 +125,9 @@ export default function Highlight({ }: Props) {
         </Popover>
         </div>
        
-     
+       )}
     </div>
+    
   )
 
 
